@@ -1,10 +1,19 @@
+# Removed Python 2-only packages:
+#   functools32==3.2.3.post2  (Python 2.7 only)
+#   enum34==1.1.6             (Python 2/3.3 only, built into Python 3.4+)
+#   backports-abc==0.5        (Python 2 only)
+#   backports.functools-lru-cache==1.4  (Python 2 only, built into Python 3.2+)
+#   backports.shutil-get-terminal-size==1.0.0  (Python 2 only, built into Python 3.3+)
+#   singledispatch==3.4.0.3   (Python 2 only, built into Python 3.4+)
+#   scandir==1.5               (Python 2 only, built into Python 3.5+)
+#   configparser==3.5.0        (Python 2 only, built into Python 3)
+#   future==0.17.1             (Python 2/3 bridge, not needed for pure Python 3)
+#   simplegeneric==0.8.1       (deprecated, superseded by functools.singledispatch)
+
 asn1crypto==0.24.0
 astroid==2.2.5
 attrs==19.1.0
 backcall==0.1.0
-backports-abc==0.5
-backports.functools-lru-cache==1.4
-backports.shutil-get-terminal-size==1.0.0
 bleach==3.1.0
 biopython==1.78
 certifi==2024.7.4
@@ -12,7 +21,6 @@ cffi==1.12.2
 chardet==3.0.4
 Click==7.0
 cloudpickle==0.8.0
-configparser==3.5.0
 cryptography==2.6.1
 cycler==0.10.0
 dask==1.1.4
@@ -21,10 +29,7 @@ defusedxml==0.5.0
 Deprecated==1.2.5
 distributed==1.26.0
 entrypoints==0.3
-enum34==1.1.6
 flake8-nb
-functools32==3.2.3.post2
-future==0.17.1
 HeapDict==1.0.0
 html5lib==0.999999999
 idna==2.8
@@ -81,13 +86,10 @@ PyYAML==3.13
 pyzmq==18.0.1
 qtconsole==4.4.3
 requests==2.21.0
-scandir==1.5
 scipy==1.2.1
 seaborn==0.9.0
 SecretStorage==3.1.1
 Send2Trash==1.5.0
-simplegeneric==0.8.1
-singledispatch==3.4.0.3
 six==1.12.0
 sortedcontainers==2.1.0
 SQLAlchemy==1.3.1
