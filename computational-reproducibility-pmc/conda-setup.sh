@@ -10,24 +10,24 @@ source "$(conda info --base)/etc/profile.d/conda.sh"
 echo '***************************lbzip2************************'
 conda install -y lbzip2
 ########################################
-# Python 3.6
+# Python 3.6 (commented out)
 ########################################
-echo '***************************raw36************************'
-conda create -n raw36 python=3.6 -y
-conda activate raw36
-pip install --upgrade pip
-pip install nbdime pipenv nltk
-pip install -e archaeology
-conda deactivate
-echo '***************************py36************************'
-conda create -n py36 python=3.6 -y
-conda activate py36
-conda install -y anaconda-navigator jupyterlab_server navigator-updater
-pip install --upgrade pip
-pip install nbdime flake8-nb biopython pipenv nltk
-pip install -e archaeology
-python -c "import nltk; nltk.download('stopwords')"
-conda deactivate
+# echo '***************************raw36************************'
+# conda create -n raw36 python=3.6 -y
+# conda activate raw36
+# pip install --upgrade pip
+# pip install nbdime pipenv nltk
+# pip install -e archaeology
+# conda deactivate
+# echo '***************************py36************************'
+# conda create -n py36 python=3.6 -y
+# conda activate py36
+# conda install -y anaconda-navigator jupyterlab_server navigator-updater
+# pip install --upgrade pip
+# pip install nbdime flake8-nb biopython pipenv nltk
+# pip install -e archaeology
+# python -c "import nltk; nltk.download('stopwords')"
+# conda deactivate
 ########################################
 # Python 3.7
 ########################################
@@ -59,26 +59,26 @@ pip install -e archaeology
 python -c "import nltk; nltk.download('stopwords')"
 conda deactivate
 ########################################
-# Modern Python versions (3.8, 3.9, 3.10)
+# Modern Python versions (3.8, 3.9, 3.10) (commented out)
 ########################################
-for PY in 3.8 3.9 3.10
-do
-  SHORT=$(echo $PY | tr -d '.')
-  
-  echo "***************************raw${SHORT}************************"
-  conda create -n raw${SHORT} python=${PY} -y
-  conda activate raw${SHORT}
-  pip install --upgrade pip
-  pip install nbdime pipenv nltk
-  pip install -e archaeology
-  conda deactivate
-  echo "***************************py${SHORT}************************"
-  conda create -n py${SHORT} python=${PY} -y
-  conda activate py${SHORT}
-  pip install --upgrade pip
-  pip install nbdime pipenv nltk
-  pip install -e archaeology
-  python -c "import nltk; nltk.download('stopwords')"
-  conda deactivate
-done
+# for PY in 3.8 3.9 3.10
+# do
+#   SHORT=$(echo $PY | tr -d '.')
+#   
+#   echo "***************************raw${SHORT}************************"
+#   conda create -n raw${SHORT} python=${PY} -y
+#   conda activate raw${SHORT}
+#   pip install --upgrade pip
+#   pip install nbdime pipenv nltk
+#   pip install -e archaeology
+#   conda deactivate
+#   echo "***************************py${SHORT}************************"
+#   conda create -n py${SHORT} python=${PY} -y
+#   conda activate py${SHORT}
+#   pip install --upgrade pip
+#   pip install nbdime pipenv nltk
+#   pip install -e archaeology
+#   python -c "import nltk; nltk.download('stopwords')"
+#   conda deactivate
+# done
 echo "All environments created successfully."
