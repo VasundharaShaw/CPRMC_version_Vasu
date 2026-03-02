@@ -97,7 +97,7 @@ ptyprocess==0.6.0
 # pycparser 2.19 → 2.21 (old source build can fail with modern setuptools)
 pycparser==2.21
 Pygments==2.3.1
-PyJWT==1.7.1
+PyJWT==2.4.0
 pyparsing==2.3.1
 # pyrsistent 0.14.11 → 0.18.1 (old C extension broken on 3.10)
 pyrsistent==0.18.1
