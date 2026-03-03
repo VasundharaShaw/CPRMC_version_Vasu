@@ -61,8 +61,15 @@ Deprecated==1.2.5
 entrypoints==0.3
 #flake8-nb
 flake8-nb==0.5.3
+# pin flake8 and sub-deps to prevent pip backtracking
+flake8==5.0.4
+pycodestyle==2.9.1
+pyflakes==2.5.0
+mccabe==0.7.0
 # fsspec required by dask 2021.10.0 (>=0.6.0)
 fsspec==2021.10.1
+# pin fonttools to prevent pip backtracking (matplotlib pulls >=4.22.0)
+fonttools==4.38.0
 HeapDict==1.0.0
 html5lib==0.999999999
 idna==2.8
