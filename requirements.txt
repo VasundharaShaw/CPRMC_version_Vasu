@@ -59,7 +59,8 @@ decorator==4.3.2
 defusedxml==0.5.0
 Deprecated==1.2.5
 entrypoints==0.3
-flake8-nb
+#flake8-nb
+flake8-nb==0.5.3
 # fsspec required by dask 2021.10.0 (>=0.6.0)
 fsspec==2021.10.1
 HeapDict==1.0.0
@@ -91,7 +92,12 @@ matplotlib-venn==0.11.5
 mistune==0.8.4
 # nbconvert 5.4.1 → 5.6.1 (flake8-nb requires nbconvert>=5.6.0; notebook 5.7.16 requires <6.0)
 nbconvert==5.6.1
+#nbdime==3.1.1
 nbdime==3.1.1
+# pin nbdime transitive deps to prevent pip backtracking on gitpython/gitdb/smmap
+gitpython==3.1.31
+gitdb==4.0.10
+smmap==5.0.0
 nbformat==4.4.0
 # notebook 5.7.5 → 5.7.16 (security fixes, better 3.10 compat)
 notebook==5.7.16
