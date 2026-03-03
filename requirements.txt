@@ -89,7 +89,6 @@ locket==1.0.0
 matplotlib-inline==0.1.6
 matplotlib-venn==0.11.5
 mistune==0.8.4
-nbconvert==5.4.1
 # nbconvert 5.4.1 → 5.6.1 (flake8-nb requires nbconvert>=5.6.0; notebook 5.7.16 requires <6.0)
 nbconvert==5.6.1
 nbdime==3.1.1
