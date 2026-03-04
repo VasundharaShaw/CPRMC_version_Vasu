@@ -27,24 +27,25 @@ conda deactivate
 ########################################
 # Python 3.10 — full environment
 ########################################
+
 echo '***************************py310************************'
 conda create -n py310 python=3.10 -y
 conda activate py310
 conda install -y \
-  alabaster appdirs astroid attrs \
+  alabaster appdirs astroid astropy attrs \
   beautifulsoup4 bitarray blosc bokeh \
   colorama cycler cython defusedxml docutils et_xmlfile \
   filelock gevent glob2 \
   html5lib imageio imagesize isort \
   jeepney jupyter jupyter_console \
   keyring kiwisolver lxml matplotlib mccabe nltk numpydoc \
-  openpyxl pathlib2 patsy pkginfo ply pyasn1 pyasn1-modules \
+  openpyxl pathlib2 patsy pkginfo ply plotly pyasn1 pyasn1-modules \
   pycodestyle pycosat pyflakes pylint \
   scikit-image scikit-learn seaborn \
   statsmodels sympy tqdm traitlets \
   unicodecsv xlrd xlsxwriter xlwt sortedcollections
 pip install --upgrade pip
-pip install nbdime pipenv nltk
+pip install nbdime pipenv nltk plotly astropy yagmail kaleido
 pip install -e archaeology
 python -c "import nltk; nltk.download('stopwords')"
 conda deactivate
