@@ -1,0 +1,19 @@
+name: Runs on Jupyter4NFDI
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 7 * * 1"
+
+jobs:
+  notebooks:
+    runs-on: ubuntu-latest
+    environment: jupyter4nfdi
+    steps:
+      - name: Run notebooks via papermill on JupyterHub
+        uses: NFDI-Jupyter/ghactions/.github/actions/notebooks@main
+        with:
+          repo: ${{ github.repository }}
+          ref: ${{ github.ref_name }}
+          # notebook_dirs: '["notebooks", "examples"]' # Only check specific folders in your repo
+          token: ${{ secrets.JUPYTERHUB_API_TOKEN }}
