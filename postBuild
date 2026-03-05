@@ -1,0 +1,3 @@
+#!/bin/bash
+echo 'export PYTHONPATH=/home/jovyan/computational-reproducibility-pmc/analyses:$PYTHONPATH' >> /home/jovyan/.bashrc
+echo 'export PYTHONPATH=/home/jovyan/computational-reproducibility-pmc/analyses:$PYTHONPATH' >> /home/jovyan/.profile
