@@ -33,6 +33,7 @@ fonttools==4.38.0
 kiwisolver==1.4.5
 cycler==0.12.1
 pyparsing==3.1.1
+kaleido>=0.2.1,<1
 plotly>=5.0,<6
 # ── Jupyter stack (modern, compatible with repo2docker base) ──
 notebook>=6.5,<7
