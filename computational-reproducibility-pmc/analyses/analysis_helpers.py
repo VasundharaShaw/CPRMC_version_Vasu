@@ -152,8 +152,6 @@ def histogram(column, bins, tick, lim, ax=None):
 dask_histogram = histogram
 
 def numpy_distribution(column):
-    if len(column) == 0:
-        return Distribution(0, 0, 0, 0, 0)
     return Distribution(
         column.min(),
         np.percentile(column, 25),
@@ -211,8 +209,7 @@ def distribution_with_boxplot(column, first, last, step, ylabel, xlabel, draw_va
     distribution = numpy_distribution(computed)
 
     fig, (ax1, ax2) = plt.subplots(nrows=2, ncols=1, sharex=True, gridspec_kw = {'height_ratios':[3, 1]})
-    if len(computed) > 0:
-        dask_histogram(column.values, bins, step, (first, last), ax=ax1)
+    dask_histogram(column.values, bins, step, (first, last), ax=ax1)
     ax1.xaxis.tick_bottom()
     ax1.set_ylabel(ylabel)
     ax1.get_yaxis().set_major_formatter(
